@@ -10,4 +10,6 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/download', [YoutubeDownloader::class, 'download']);
 
-Route::post('/generate-video', [YoutubeDownloader::class, 'generateVideo']);
+Route::post('/generate', [YoutubeDownloader::class, 'getAvailableQualities']);
+
+Route::post('/download-resolution', [YoutubeDownloader::class, 'downloadWithResolution']);
