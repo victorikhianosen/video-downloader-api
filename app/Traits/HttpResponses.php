@@ -17,7 +17,7 @@ trait HttpResponses
         return response()->json($res, $code);
     }
 
-    public function error($errors = [], $message = 'Request failed.', $code = 400)
+    public function error($message = 'Request failed.', $code = 400, $errors = [],)
     {
         $res = [
             'status' => 'failed',
@@ -30,7 +30,4 @@ trait HttpResponses
 
         return response()->json($res, $code);
     }
-
-
-    
 }
